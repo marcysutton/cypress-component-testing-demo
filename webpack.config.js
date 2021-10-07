@@ -38,4 +38,10 @@ module.exports = {
             template: path.join(__dirname, "/", "index.html"),
         }),
     ],
+    // Weird detail from axe-core, refer to: https://github.com/dequelabs/axe-core-npm/issues/210
+    resolve: {
+        fallback: {
+            crypto: false
+        }
+    }
 }

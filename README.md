@@ -14,8 +14,14 @@ npm install
 npm run dev
 ```
 
-## Run tests
+## Run Cypress integration tests
 
 ```
 npm test
+```
+
+### Run Cypress component tests
+
+```
+npm run test:components
 ```

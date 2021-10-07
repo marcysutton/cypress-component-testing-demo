@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack",
-    "test": "npx cypress open-ct"
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
+    "test": "start-server-and-test dev http://localhost:8080 cypress:open",
+    "test:components": "npx cypress open-ct"
   },
   "repository": {
     "type": "git",
@@ -24,13 +27,25 @@
     "@babel/preset-react": "^7.14.5",
     "@cypress/react": "^5.9.4",
     "@cypress/webpack-dev-server": "^1.5.0",
+    "axe-core": "^4.3.3",
     "babel-loader": "^8.2.2",
-    "cypress": "^8.3.1",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "cypress": "^8.5.0",
+    "cypress-axe": "^0.13.0",
+    "cypress-real-events": "^1.5.1",
     "html-webpack-plugin": "^5.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "start-server-and-test": "^1.14.0",
+    "stream-browserify": "^3.0.0",
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.0"
+  },
+  "dependencies": {
+    "css-loader": "^6.3.0",
+    "style-loader": "^3.3.0",
+    "styled-components": "^5.3.1"
   }
 }
